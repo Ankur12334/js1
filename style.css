@@ -9,34 +9,25 @@ html, body {
   height: 100%;
   width: 100%;
 }
-body{
-  background-color: cadetblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.main{
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.container{
-  border-radius: 10px;
-  width: 300px;
-  height: 420px;
-  background-color: #fff;
-  overflow: hidden;
+.cursor{
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all linear 0.2s;
+    mix-blend-mode: difference;
 }
-.container img{
-  height: 100% ;
-  width: 100%;
-  object-fit: cover;
-  object-position: left;
-  border-radius: 10px;
-
-}
-.container i {
-  color: #fff;
-  font-size: 75px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%) scale(0);
-  opacity: 0;
-  transition: transform  ease 0.5s;
+h1{
+    font-size: 8vw;
+    font-weight: 800;
 }

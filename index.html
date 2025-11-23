@@ -1,16 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>story</title>
-    <link rel="stylesheet" href="style.css" class="css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>RoomBooking — Home</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-      <main>
-        <button>Create element</button>
-      </main>     
-    
+<header class="site-header sticky">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">RoomBooking</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="cities.html">Cities</a>
+      <a href="host.html">Host</a>
+      <a href="login.html" class="btn small">Login</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Find a room you'll love</h1>
+      <p class="muted">Trusted monthly rooms across your city — verified & updated daily.</p>
+      <form id="hero-search" class="search-bar" onsubmit="return goRoomsFromHero(event)">
+        <input id="q-city" type="text" placeholder="City, locality or landmark" />
+        <select id="q-type">
+          <option value="">Any type</option>
+          <option>Single</option>
+          <option>Shared</option>
+          <option>Studio</option>
+        </select>
+        <button class="btn">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="container trending">
+    <h2>Trending Cities</h2>
+    <div class="trending-grid" id="trending-cities"></div>
+  </section>
+
+  <section class="container featured">
+    <h2>Featured Rooms</h2>
+    <div class="slider" id="featured-slider"></div>
+  </section>
+
+  <section class="container filters-chips">
+    <div class="chips-row" id="filter-chips"></div>
+  </section>
+
+  <section class="container rooms-grid-section">
+    <div class="section-head">
+      <h2>Popular Rooms</h2>
+      <div><button class="btn ghost" onclick="openRooms()">View all rooms</button></div>
+    </div>
+    <div id="rooms-grid" class="rooms-grid"></div>
+    <div class="pagination" id="home-pagination"></div>
+  </section>
+
+  <section class="container how">
+    <h2>How it works</h2>
+    <div class="how-grid">
+      <div class="how-card"><strong>Search</strong><p>Find rooms by city, type, budget.</p></div>
+      <div class="how-card"><strong>Connect</strong><p>Message host via WhatsApp</p></div>
+      <div class="how-card"><strong>Book</strong><p>Secure online booking flow.</p></div>
+    </div>
+  </section>
+
+  <section class="container testimonials">
+    <h2>Testimonials</h2>
+    <div class="test-grid" id="testimonials"></div>
+  </section>
+
+  <section class="container host-cta">
+    <div class="cta-card">
+      <h3>Host your room — Earn monthly</h3>
+      <p>List in 5 minutes. Verified tenants and smooth payouts.</p>
+      <a class="btn" href="host.html">Host a room</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© RoomBooking • Privacy • Terms</div>
+    <div class="footer-links"><a href="admin-login.html">Admin</a></div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

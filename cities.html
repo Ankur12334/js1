@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cities — RoomBooking</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header sticky">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">RoomBooking</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="cities.html" class="active">Cities</a>
+      <a href="host.html">Host</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-title">
+    <h1>Explore Rooms by City</h1>
+    <p class="muted">Select a city to see verified monthly rentals.</p>
+  </div>
+
+  <div class="city-grid" id="city-grid"></div>
+
+  <section id="city-localities" class="container localities hidden">
+    <h3>Popular localities</h3>
+    <div id="locality-chips" class="chips-row"></div>
+    <div id="city-rooms" class="rooms-grid three-col"></div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container footer-inner">© RoomBooking</div></footer>
+<script src="scripts.js"></script>
+</body>
+</html>

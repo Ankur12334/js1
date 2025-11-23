@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Profile — RoomBooking</title>
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="site-header sticky"><div class="container header-inner"><a class="logo" href="index.html">RoomBooking</a></div></header>
+<main class="container profile-page">
+  <section class="profile-card card">
+    <div class="profile-top">
+      <div class="avatar large">AS</div>
+      <div>
+        <h2 id="profile-name">Ankur</h2>
+        <div class="muted" id="profile-email">gyansinson15@gmail.com</div>
+        <button class="btn">Edit Profile</button>
+      </div>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="listings">My Listings</button>
+      <button class="tab-btn" data-tab="bookings">My Bookings</button>
+      <button class="tab-btn" data-tab="wishlist">My Wishlist</button>
+      <button class="tab-btn" data-tab="contacts">Contact History</button>
+    </div>
+    <div id="tab-content" class="tab-content"></div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container footer-inner">© RoomBooking</div></footer>
+<script src="scripts.js"></script>
+</body></html>

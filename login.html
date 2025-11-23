@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Login — RoomBooking</title>
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="site-header sticky"><div class="container header-inner"><a class="logo" href="index.html">RoomBooking</a></div></header>
+<main class="container center-page">
+  <div class="card auth-card">
+    <h2>Login</h2>
+    <form onsubmit="return doLogin(event)">
+      <label>Email<input id="login-email" type="email" required></label>
+      <label>Password<input id="login-pass" type="password" required></label>
+      <div class="muted small"><a href="#">Forgot password?</a></div>
+      <button class="btn primary">Login</button>
+    </form>
+    <div class="muted">Don't have an account? <a href="signup.html">Sign up</a></div>
+  </div>
+</main>
+<footer class="site-footer"><div class="container footer-inner">© RoomBooking</div></footer>
+<script src="scripts.js"></script>
+</body></html>

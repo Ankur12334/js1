@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Rooms — RoomBooking</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header sticky">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">RoomBooking</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="rooms.html" class="active">Rooms</a>
+      <a href="cities.html">Cities</a>
+      <a href="host.html">Host</a>
+      <a href="login.html" class="btn small">Login</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page-layout">
+  <aside class="sidebar" id="filters">
+    <h3>Filters</h3>
+    <div class="card filter-card">
+      <label>Search<input id="f-search" type="text" placeholder="Search keywords"></label>
+      <label>City
+        <select id="f-city"><option value="">All</option><option>Bengaluru</option><option>Mumbai</option><option>Pune</option></select>
+      </label>
+      <label>Price (max)
+        <input id="f-price" type="range" min="1000" max="50000" value="20000">
+        <div class="muted">Up to ₹<span id="f-price-val">20000</span>/mo</div>
+      </label>
+      <label>Room type
+        <select id="f-type"><option value="">Any</option><option>Single</option><option>Shared</option></select>
+      </label>
+      <div class="amenities">
+        <strong>Amenities</strong>
+        <div class="amen-grid">
+          <label><input type="checkbox" value="wifi"> WiFi</label>
+          <label><input type="checkbox" value="ac"> AC</label>
+          <label><input type="checkbox" value="balcony"> Balcony</label>
+          <label><input type="checkbox" value="wardrobe"> Wardrobe</label>
+        </div>
+      </div>
+      <label>Duration (months)
+        <select id="f-duration"><option value="">Any</option><option>1</option><option>3</option><option>6</option><option>12</option></select>
+      </label>
+      <label>Furnishing
+        <select id="f-furnish"><option value="">Any</option><option>Furnished</option><option>Semi-furnished</option><option>Unfurnished</option></select>
+      </label>
+      <label>Gender
+        <select id="f-gender"><option value="">Any</option><option>Male</option><option>Female</option><option>Any</option></select>
+      </label>
+      <div class="filter-actions">
+        <button class="btn" onclick="applyFilters()">Apply</button>
+        <button class="btn ghost" onclick="clearFilters()">Clear All</button>
+      </div>
+    </div>
+  </aside>
+
+  <section class="content">
+    <div class="page-title">
+      <h1>Find Rooms In Your City</h1>
+      <p class="muted">Thousands of verified rooms, updated daily.</p>
+    </div>
+
+    <div id="rooms-grid" class="rooms-grid three-col"></div>
+
+    <div class="pagination" id="rooms-pagination"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© RoomBooking</div>
+    <div><a href="index.html">Home</a> · <a href="host.html">Host</a></div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

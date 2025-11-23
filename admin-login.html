@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Admin Login — RoomBooking</title>
+<link rel="stylesheet" href="styles.css"></head>
+<body class="dark-bg">
+<main class="container center-page">
+  <div class="card auth-card dark">
+    <h2>Admin Login</h2>
+    <form onsubmit="return doAdminLogin(event)">
+      <label>Email<input id="admin-email" type="email" required></label>
+      <label>Password<input id="admin-pass" type="password" required></label>
+      <button class="btn primary">Login</button>
+    </form>
+  </div>
+</main>
+<script src="scripts.js"></script>
+</body></html>

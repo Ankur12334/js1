@@ -1,66 +1,177 @@
-var products = [
-    {name: "white chair", headline: "mordern look chair ", price: "15,000",image:"https://images.unsplash.com/photo-1547587091-f883cf8f0c12?q=80&w=1036&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
-    {name: "traditional chair", headline: "old money look ", price: "10,000",image:"https://plus.unsplash.com/premium_photo-1712736395894-90460e186b4f?q=80&w=985&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
-    {name: "new look tradition", headline: "new look traditional chair", price: "12,000",image:"https://plus.unsplash.com/premium_photo-1675186049302-a0dad4cf3412?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2hpdGUlMjBjaGFpcnxlbnwwfHwwfHx8MA%3D%3D"},
-    {name: "morden design", headline: "mordern design chair", price: "7000",image:"https://plus.unsplash.com/premium_photo-1704686579466-7792fa8dc063?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHdoaXRlJTIwY2hhaXJ8ZW58MHx8MHx8fDA%3D"},
+const reels = [
+  {
+    user: "ankur_ai",
+    likeCount: 1542,
+    isLike: false,
+    commentCount: 187,
+    caption: "Late-night building my AI project.",
+    video: "./reels/videoone.mp4",
+    userProfile: "https://picsum.photos/id/237/300/300",
+    shareCount: 42,
+    isFollowed: true
+  },
+  {
+    user: "travel_with_riya",
+    likeCount: 9823,
+    isLike: true,
+    commentCount: 643,
+    caption: "Sunset in Goa just hits different.",
+    video: "./reels/video2.mp4",
+    userProfile: "https://picsum.photos/id/1027/300/300",
+    shareCount: 312,
+    isFollowed: false
+  },
+  {
+    user: "codecrush",
+    likeCount: 4321,
+    isLike: false,
+    commentCount: 201,
+    caption: "JS tip: Stop overengineering everything.",
+    video: "./reels/videoone.mp4",
+    userProfile: "https://picsum.photos/id/1005/300/300",
+    shareCount: 121,
+    isFollowed: true
+  },
+  {
+    user: "fitness_rahul",
+    likeCount: 7890,
+    isLike: true,
+    commentCount: 512,
+    caption: "No excuses. Monday grind.",
+    video: "./reels/video2.mp4",
+    userProfile: "https://picsum.photos/id/1062/300/300",
+    shareCount: 284,
+    isFollowed: true
+  },
+  {
+    user: "foodie_divya",
+    likeCount: 2331,
+    isLike: false,
+    commentCount: 119,
+    caption: "Dal Baati done right.",
+    video: "./reels/videoone.mp4",
+    userProfile: "https://picsum.photos/id/1084/300/300",
+    shareCount: 57,
+    isFollowed: false
+  },
+  {
+    user: "gaming_arjun",
+    likeCount: 15489,
+    isLike: true,
+    commentCount: 902,
+    caption: "One shot. One kill.",
+    video: "./reels/video2.mp4",
+    userProfile: "https://picsum.photos/id/1074/300/300",
+    shareCount: 621,
+    isFollowed: false
+  },
+  {
+    user: "tech_muskan",
+    likeCount: 6754,
+    isLike: false,
+    commentCount: 344,
+    caption: "Unboxing the new VR headset.",
+    video: "./reels/videoone.mp4",
+    userProfile: "https://picsum.photos/id/1011/300/300",
+    shareCount: 198,
+    isFollowed: true
+  },
+  {
+    user: "artist_kabir",
+    likeCount: 2841,
+    isLike: true,
+    commentCount: 164,
+    caption: "Sketching live. No edits.",
+    video: "./reels/video2.mp4",
+    userProfile: "https://picsum.photos/id/1021/300/300",
+    shareCount: 77,
+    isFollowed: false
+  },
+  {
+    user: "life_with_sana",
+    likeCount: 945,
+    isLike: false,
+    commentCount: 61,
+    caption: "Morning chai and peace.",
+    video: "./reels/videoone.mp4",
+    userProfile: "https://picsum.photos/id/1025/300/300",
+    shareCount: 23,
+    isFollowed: true
+  },
+  {
+    user: "vlogger_vishal",
+    likeCount: 11872,
+    isLike: true,
+    commentCount: 723,
+    caption: "Mumbai nights are unbeatable.",
+    video: "./reels/video2.mp4",
+    userProfile: "https://picsum.photos/id/1035/300/300",
+    shareCount: 389,
+    isFollowed: false
+  }
 ];
-var popular = [
-    {name: "white chair", headline: "mordern look chair ", price: "15,000",image:"https://images.unsplash.com/photo-1742681615996-ab36fa57f33e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fHdoaXRlJTIwY2hhaXJ8ZW58MHx8MHx8fDA%3D"},
-    {name: "sofa chair", headline: "old money look ", price: "10,000",image:"https://images.unsplash.com/photo-1605197166463-7cb34498c087?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
-    {name: "red tradition look", headline: "new look traditional chair", price: "12,000",image:"https://images.unsplash.com/photo-1600778321438-4785de7fb702?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fHdoaXRlJTIwY2hhaXJ8ZW58MHx8MHx8fDA%3D"},
-    {name: "morden design", headline: "mordern design chair", price: "7000",image:"https://plus.unsplash.com/premium_photo-1683120703250-08298f42675e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fHdoaXRlJTIwY2hhaXJ8ZW58MHx8MHx8fDA%3D"},
+var allReels = document.querySelector(".all-reels");
 
-];
 
-var card = [];
+function addData(){
 
-function addProducts(){
-    var clutter = "";
-products.forEach(function(product, index) {
-    clutter += `<div class="product w-fit rounded-xl p-2 bg-white">
-                <div class="image w-[14rem] h-[13rem] bg-zinc-200 rounded-xl overflow-hidden">
-                <img class="w-full h-full object-cover" src="${product.image}"/>
-                </div>
-                <div class="data w-full px-2 py-5">
-                    <h1 class="font-semibold text-xl leading-none tracking-tight">${product.name}</h1>
-                    <div class="flex justify-between w-full items-center mt-2">
-                        <div class="w-1/2">
-                            <h3 class="font-semibold opacity-20">${product.headline}</h3>
-                            <h4 class="font-semibold mt-2">&#8377; ${product.price}</h4>
-                        </div>
-                        <button data-index="${index}" class="add w-10 h-10 rounded-full shader text-yellow-400"><i data-index="${index}" class="add ri-add-line"></i></button>
-                    </div>
-                </div>
-            </div>`;
+var sum = "";
+reels.forEach(function(elem,idx){
+  sum += ` <div class="reel">
+          <video autoplay loop muted src="${elem.video}"></video>
+          <div class="bottom">
+            <div class="user">
+              <img
+                src="${elem.userProfile}"
+                alt="">
+              <h4>${elem.user}</h4>
+              <button id =${idx} class="follow">${elem.isFollowed?'unfollow':'follow'}</button>
+            </div>
+            <h3>${elem.caption}</h3>
+          </div>
+          <div class="right">
+            <div id="${idx}" class="like">
+              <h4 class="like-icon">${elem.isLike?'<i class="love ri-heart-3-fill "></i>':'<i class="ri-heart-3-line "></i>'}</h4>
+              <h6>${elem.likeCount}</h6>
+            </div>
+            <div class="comment">
+              <h4 class="comment-icon"><i class="ri-chat-3-line"></i></h4>
+              <h6>${elem.commentCount}</h6>
+            </div>
+            <div class="share">
+              <h4 class="share-icon"><i class="ri-share-forward-fill"></i></h4>
+              <h6>${elem.shareCount}</h6>
+            </div>
+             <div class="menu">
+              <h4 class="menu-icon"><i class="ri-more-2-fill"></i></i></h4>
+              
+            </div>
+          </div>
+
+        </div>`
 });
-
-document.querySelector(".products").innerHTML = clutter;
-};
-
-function addPopularProduct(){
-    var clutter = "";
-    popular.forEach(function(product){
-        clutter += `<div class="popular bg-white p-2 rounded-2xl flex items-start gap-3 w-[60%] flex-shrink-0">
-                    <div class="w-20 h-20 bg-red-500 flex-shrink-0 rounded-2xl border-4 border-white overflow-hidden">
-                        <img class="w-full h-full object-cover" src="${product.image}" alt="">
-                    </div>
-                    <div class="data py-2 w-full">
-                        <h1 class="leading-none font-semibold">${product.name}</h1>
-                        <h4 class="leading-none mt-2 text-sm font-semibold opacity-20">${product.headline}</h4>
-                        <h4 class="mt-3 font-semibold text-zinc-500">${product.price}</h4>
-                    </div>
-                </div>`;
-    });
-    document.querySelector(".populars").innerHTML = clutter;
-};
-function addToCard(){
-    document.querySelector(".products")
-    .addEventListener("click",function(detail){
-        if(detail.target.classList.contains('add')){
-            card.push(products[detail.target.dataset.index]);
-        }
-    })
+allReels.innerHTML = sum;
 }
-addToCard();
-addPopularProduct();
-addProducts();
+addData()
+
+allReels.addEventListener('click',function(dets){
+ 
+  if (dets.target.className== 'like'){
+    if(!reels[dets.target.id].isLike){
+      reels[dets.target.id].likeCount++;
+    reels[dets.target.id].isLike = true;
+    }else{
+      reels[dets.target.id].likeCount--;
+    reels[dets.target.id].isLike = false;
+
+    }
+  }
+  if(dets.target.className =='follow')
+    if(!reels[dets.target.id].isFollowed){
+    reels[dets.target.id].isFollowed = true;
+    }else{
+      reels[dets.target.id].isFollowed = false;
+    }
+
+addData()
+})
